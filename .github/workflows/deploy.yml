@@ -1,4 +1,4 @@
- name: Check key format
+
         run: |
           echo "Key length: ${#SSH_KEY}"
           echo "$SSH_KEY" | head -1
