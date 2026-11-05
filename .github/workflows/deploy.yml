@@ -1,16 +1,13 @@
+yaml
+name: Deploy to AWS
 
-        run: |
-          echo "Key length: ${#SSH_KEY}"
-          echo "$SSH_KEY" | head -1
-        env:
-          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          on:
+on:
   push:
     branches: [ main ]
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
